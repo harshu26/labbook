@@ -1,0 +1,19 @@
+package lab2;
+
+public abstract class MediaItem extends Item {
+	private int runtime;
+
+	public int getRuntime() {
+		return runtime;
+	}
+
+	public void setRuntime(int runtime) {
+		this.runtime = runtime;
+	}
+	
+	public MediaItem(int identificationNumber,String title,int numberofcopies,int runtime) {
+		super(identificationNumber,title,numberofcopies);
+		this.runtime=runtime;
+	}
+
+}

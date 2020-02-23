@@ -1,0 +1,43 @@
+package lab2;
+
+public class Video extends MediaItem {
+	private String director;
+	private String genre;
+	private int releaseyear;
+	
+	public Video(int identificationNumber,String title,int numberofcopies,int runtime,String director,String genre,int releaseyear) {
+		super(identificationNumber,title,numberofcopies,runtime);
+		this.director=director;
+		this.genre=genre;
+		this.releaseyear=releaseyear;
+	}
+
+	public String getDirector() {
+		return director;
+	}
+
+	public void setDirector(String director) {
+		this.director = director;
+	}
+
+	public String getGenre() {
+		return genre;
+	}
+
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
+
+	public int getReleaseyear() {
+		return releaseyear;
+	}
+
+	public void setReleaseyear(int releaseyear) {
+		this.releaseyear = releaseyear;
+	}
+	
+	
+	
+	
+	
+}

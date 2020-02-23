@@ -1,0 +1,51 @@
+package lab2;
+
+public abstract class Item {
+	private int identificationNumber;
+	private String title;
+	private int numberofcopies;
+	
+		public Item(int identificationNumber,String title,int numberofcopies) {
+			this.identificationNumber=identificationNumber;
+			this.title=title;
+			this.numberofcopies=numberofcopies;
+		}
+
+		public int getIdentificationNumber() {
+			return identificationNumber;
+		}
+
+		public void setIdentificationNumber(int identificationNumber) {
+			this.identificationNumber = identificationNumber;
+		}
+
+		public String getTitle() {
+			return title;
+		}
+
+		public void setTitle(String title) {
+			this.title = title;
+		}
+
+		public int getNumberofcopies() {
+			return numberofcopies;
+		}
+
+		public void setNumberofcopies(int numberofcopies) {
+			this.numberofcopies = numberofcopies;
+		}
+		
+		@Override
+		public String toString() {
+			String str = "Identification=" +identificationNumber +" "+"Title="+title+" "+"Number of copies="+numberofcopies;
+			return str;
+		}
+		
+	//	public void print() {
+	//		System.out.println("Identification Number :"+identificationNumber+" "+"Title :"+title+" "+"Number of Copies :"+numberofcopies);
+		//}
+
+		
+		
+
+}

@@ -1,0 +1,56 @@
+package lab2;
+
+public class Library {
+		public static void main(String [] args) {
+			
+			Item items[] = new Item[3];
+			
+			Item item1 = new JournalPaper(01, "Java", 10, "xyz", 1998);
+			items[0] = item1;
+			
+			Item item2 = new Video(02,"Oracle",50,100,"abcd","Technical",2004);
+			items[1] = item2;
+			
+			Item item3 = new CD(03,"Oracle",50,100,"abc","Technical");
+			items[2] = item3;
+		
+			Library lib = new Library();
+			lib.display(items);
+		}
+		
+		public void display(Item [] i) {
+			for(int a=0;a<i.length;a++) {
+				Item e = i[a];
+				display(e);
+					if(e instanceof JournalPaper) {
+					JournalPaper j = (JournalPaper)e;
+					display(j);
+				}
+				else if(e instanceof Video) {
+					Video v = (Video)e;
+					display(v);
+				}
+				
+				else if(e instanceof CD) {
+					CD c = (CD)e;
+					display(c);
+				}
+				
+			}
+			
+		}
+		
+		public void display(Item e) {
+			System.out.println("Identification:"+e.getIdentificationNumber()+", "+"Title:"+e.getTitle()+" ,"+"Copies:"+e.getNumberofcopies());
+		
+		}
+		public void display(JournalPaper j) {
+			System.out.println("Journal year: "+j.getYear()+" ,"+"Author: "+j.getAuthor());
+		}
+		public void display(Video v) {
+			System.out.println("Video Director :"+v.getDirector()+", "+" Video Genere :"+v.getGenre()+", "+"Video Release year:"+v.getReleaseyear()+", "+"Run Time: "+v.getRuntime());
+		}
+		public void display(CD c) {
+			System.out.println("CD Artist:"+c.getArtist()+", "+"CD Genere:"+c.getCdgenre());
+		}
+}
