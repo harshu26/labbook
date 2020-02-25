@@ -1,6 +1,6 @@
 package demo;
 import java.util.*;
-public class Lab5Exercise21 {
+public class Lab5Exercise1 {
 	
 	 private static Scanner in;
 
